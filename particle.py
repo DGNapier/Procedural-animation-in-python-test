@@ -24,7 +24,21 @@ class Particle:
             canvas: Tkinter canvas to draw on
             radius: Radius of the particle circle (size in pixels)
             Color: Color of the particle
+        
+        Returns:
+            Canvas object ID of the drawn oval
         """
 
-        x, y = self.position
-        canvas.create_oval(x - radius, y - radius, x + radius, y + radius, fill=color)
+        x, y = self.position # This is creating a bounding box. x - radius, y - radius is the top left of the particle.
+        return canvas.create_oval(x - radius, y - radius, x + radius, y + radius, fill=color) # x + radius, y + radius is the bottom right of the particle.
+
+    def update_position(self, x, y):
+        """
+        This is for updating a particle's position and previouis position to new coordinates.
+
+        Attributes:
+            x: new x coordinates
+            y: new y coordinates
+        """
+        self.position = [x, y]
+        self.previous_position = [x, y]
