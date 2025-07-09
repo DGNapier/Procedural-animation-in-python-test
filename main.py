@@ -19,10 +19,8 @@ class App:
         self.particle = Particle(400, 300)
         self.particle_id = self.particle.draw(self.canvas)
 
-        # Mouse position
         self.mouse_pos = [400, 300]
 
-        # animation loop
         self.running = True
         self.animate()
 
@@ -46,11 +44,9 @@ class App:
         # Update particle position to follow mouse
         self.particle.update_position(*self.mouse_pos)
 
-        # Clear canvas and redraw particle
         self.canvas.delete("all")
         self.particle_id = self.particle.draw(self.canvas)
 
-        # next frame
         self.root.after(16, self.animate)
 
     def run(self):
