@@ -1,4 +1,4 @@
-"""This python file will handl anything related to the Particle class, encapsulating all particle-related logic and attributes."""  # pylint: disable=line-too-long
+"""This python file will handle anything related to the Particle class, encapsulating all particle-related logic and attributes."""  # pylint: disable=line-too-long
 
 
 class Particle:
